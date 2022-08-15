@@ -15,3 +15,8 @@ def config(fileName, section):
     else:
         raise Exception("la section {} n'existe pas dans le fichier {}".format(section, fileName))
 
+
+if __name__ == '__main__':
+    data = config('conf.ini', 'mysql')
+
+    print(data)

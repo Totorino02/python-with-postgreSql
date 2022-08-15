@@ -8,16 +8,15 @@ class DepotController:
         Attributes:
             configFileName: str 
                 Name of the config file in witch we have all the necessary informations for the connectivity
-    
-    Methods:
-        createTable -> boolean
-        insertData -> boolean
-        findAll -> List
-        findById -> Nom
-        findBy -> List
+        Methods:
+            createTable -> boolean
+            insertData -> boolean
+            findAll -> List
+            findById -> Nom
+            findBy -> List
     """
 
-    def __init__(self, configFileName):
+    def __init__(self, configFileName: str):
         self.configFileName = configFileName
         self.params = config(configFileName, "Postgresql")
 

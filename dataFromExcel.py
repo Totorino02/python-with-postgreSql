@@ -36,7 +36,7 @@ class DataFromExcel:
             with psycopg.connect(**self.params) as connection:
                 with connection.cursor() as cursor:
                     cursor.execute("""
-                    CREATE TABLE pokemon (
+                    CREATE TABLE IF NOT EXISTS pokemon (
                         id bigserial PRIMARY KEY,
                         name TEXT NOT NULL,
                         type1 TEXT NOT NULL,
